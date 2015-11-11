@@ -19,7 +19,7 @@ It is possible that you get some Kibana timeouts if you try to access data right
 
 Then the quickest way to see something cool is to go to Visualize > Vertical Bar Chart > From a new search > Y Axis / Aggregation Sum / Field amount > Select bucket X Axis / Aggregation Date Histogram / Interval Monthly > Click on the Apply changes arrow right to Data / Options. Make sure you set the time span at the top right to "Last 5 years". If you change to "Interval Daily" and paste `Merchant:"omv" OR Merchant:"petro" OR Merchant:"mol" OR Merchant:"luk"` into the search bar you will get to see a graph of your monthly trips to the gas station.
 
-The CSV has the following fields that are available in Kibana for querying: Type (Purchase or Withdrawal), Amount, Card, Merchant and Date. The Merchant field contains everything in the transaction details like merchant name and address.
+The CSV has the following fields that are available in Kibana for querying: Type (Purchase, Transfer or Withdrawal), Amount, Card and Merchant. The Merchant field contains everything in the transaction details like merchant name, address and other gibberish.
 
 Other stuff you'll have to figure out by yourself but the most useful would be to play with the search patterns that Kibana queries offer. You can start [here](https://www.elastic.co/guide/en/kibana/3.0/queries.html). A good basic tutorial would be this one [http://blog.webkid.io/visualize-datasets-with-elk/](http://blog.webkid.io/visualize-datasets-with-elk/).
 ome'Bank only allows downloading statements for the last 2 years but I can imagine the graphs would look way cooler with more data.
